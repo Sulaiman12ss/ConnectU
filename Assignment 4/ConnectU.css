@@ -90,10 +90,31 @@ body {
     transform: scale(1.05); /* Scale effect on hover */
 }
 
-.search {
-    display: flex;
-    align-items: center;
+/* Search Bar */
+.search-bar {
+    width: 250px; /* Make the search bar larger */
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #008CBA;
+    border-radius: 20px;
+    outline: none;
+    transition: width 0.3s ease, opacity 0.3s ease; /* Add transition for smooth visibility */
 }
+
+/* Optional: Increase search bar width when focused */
+.search-bar:focus {
+    width: 300px; /* Expand width when focused */
+    border-color: #005f80; /* Change border color on focus */
+}
+
+/* Search Button */
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
 
 .btn {
     padding: 8px 16px;
@@ -175,7 +196,7 @@ body {
         margin: 10px 0;
     }
 
-    .menu-search {
+    .search-bar {
         width: 100%;
         flex-direction: column;
     }
@@ -200,12 +221,47 @@ body {
         font-size: 40px;
     }
 }
-.imprint-content {
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #000;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px auto;
+
+
+/* Button styling */
+.imprint-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FF5722; /* Soft orange color */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
+
+.imprint-btn:hover {
+    background-color: #b43610; /* Darker orange on hover */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+/* Imprint content styling */
+.imprint-content {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.5s ease; /* Smooth open/close transition */
+}
+
+/* Smooth transition for showing content */
+.imprint-content.show {
+    display: block;
+    opacity: 1;
+}
+
