@@ -21,6 +21,12 @@ body {
     padding: 15px 50px;
     background-color: rgb(0, 32, 63);
     color: #fff;
+    position: fixed; /* Or relative/absolute depending on your design */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it spans the width of the page */
+    z-index: 1000; /* Make sure it sits above other elements */
+    
 }
 
 .navbar .logo img {
